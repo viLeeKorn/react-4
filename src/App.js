@@ -1,13 +1,17 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import "./App.css";
-import User from "./User";
+import Page from "./Page";
+import DefferedPage from "./DefferedPage";
 
 function App() {
   return (
     <div className="App">
       <p>My Suspense App</p>
       <Suspense fallback={<p>loading...</p>}>
-        <User />
+        <Page />
+      </Suspense>
+      <Suspense fallback={<p>defLoading...</p>}>
+        <DefferedPage />
       </Suspense>
     </div>
   );
